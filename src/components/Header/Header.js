@@ -12,7 +12,7 @@ function Header() {
             <div className="header__left">
                 <Avatar 
                     className="header__avatar"
-                    alt="Lazar Kostic"
+                    alt="Tech Slack"
                     src="https://scontent.fbeg7-1.fna.fbcdn.net/v/t1.0-9/35159270_1885118164861091_6967089570097659904_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=cJQrJjzklzYAX_P0Dyc&_nc_ht=scontent.fbeg7-1.fna&oh=714f09a79673c2c923b2bea66e52039d&oe=5F737D20"
                     //alt={user?.displayName}
                     //src={user?.photoUrl}
@@ -21,7 +21,7 @@ function Header() {
             </div>
             <div className="header__search">
                 <SearchIcon />
-                <input placeholder="Search Lazar Kostic" type="text"/>
+                <input placeholder="Search Tech Slack" type="text"/>
             </div>
             <div className="header__right">
                 <HelpOutlineIcon />
