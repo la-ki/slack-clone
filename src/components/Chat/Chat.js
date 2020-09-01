@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Chat.css';
 
+import Message from '../Message/Message';
+
 import { useParams } from 'react-router-dom';
 
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
@@ -50,7 +52,14 @@ function Chat() {
                 </div>
             </div>
             <div className="chat__messages">
-
+                {roomMessages.map(({message, timestamp, user, userImage}) => (
+                    <Message
+                        message={message}
+                        timestamp={timestamp}
+                        user={user}
+                        userImage={userImage}
+                    />
+                ))}
             </div>
         </div>
     )
