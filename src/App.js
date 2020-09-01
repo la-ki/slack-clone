@@ -8,9 +8,11 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Chat from './components/Chat/Chat';
 import Login from './components/Login/Login';
 
+import { useStateValue } from './StateProvider';
+
 function App() {
 
-  const [user, setUser] = useState(null);
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="app">
@@ -18,21 +20,21 @@ function App() {
         {!user ? (
           <Login />
         ) : (
-          <>
-            <Header />
-            <div className="app__body">
-              <Sidebar />
-              <Switch>
-                <Route path="/room/:roomId">
-                  <Chat />
-                </Route>
-                <Route path="/">
-                  <h1>Welcome</h1>
-                </Route>
-              </Switch>
-            </div>
+            <>
+              <Header />
+              <div className="app__body">
+                <Sidebar />
+                <Switch>
+                  <Route path="/room/:roomId">
+                    <Chat />
+                  </Route>
+                  <Route path="/">
+                    <h1>Welcome</h1>
+                  </Route>
+                </Switch>
+              </div>
             </>
-        )}
+          )}
 
       </Router>
     </div>

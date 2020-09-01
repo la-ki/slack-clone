@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Chat.css';
 
 import Message from '../Message/Message';
+import ChatInput from '../ChatInput/ChatInput';
 
 import { useParams } from 'react-router-dom';
 
@@ -61,6 +62,8 @@ function Chat() {
                     />
                 ))}
             </div>
+
+            <ChatInput channelName={roomDetails?.name} channelId={roomId} />
         </div>
     )
 }
